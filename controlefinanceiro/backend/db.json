@@ -1,0 +1,23 @@
+{
+"products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 1200.89,
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "name": "Smartphone",
+      "price": 800.50,
+      "category": "Electronics"
+    },
+    {
+      "id": 3,
+      "name": "Desk Chair",
+      "price": 150.75,
+      "category": "Furniture"
+    }
+  ]
+
+}
