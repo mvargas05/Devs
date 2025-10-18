@@ -1,21 +1,30 @@
-<mat-card>
-    <mat-card-title>Novo Produto</mat-card-title>
+
+<div class="card">
+    <h2>Novo Produto</h2>
     <form #form="ngForm">
-        <mat-form-field>
-            <input matInput placeholder="Nome"
-                [(ngModel)]="product.name" name="name" required>
+        <mat-form-field appearance="outline">
+            <mat-label>Nome</mat-label>
+            <input matInput [(ngModel)]="product.name" name="name" required #name="ngModel" aria-label="Nome do produto">
+            <mat-error *ngIf="name.invalid && name.touched">
+                O nome é obrigatório.
+            </mat-error>
         </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Preço (R$)"
-                [(ngModel)]="product.price" name="price" type="number" min="0" required>
+        <mat-form-field appearance="outline">
+            <mat-label>Preço (R$)</mat-label>
+            <input matInput [(ngModel)]="product.price" name="price" type="number" min="0" required #price="ngModel" aria-label="Preço do produto">
+            <mat-error *ngIf="price.invalid && price.touched">
+                <span *ngIf="price.errors?.required">O preço é obrigatório.</span>
+                <span *ngIf="price.errors?.min">O preço deve ser maior ou igual a zero.</span>
+            </mat-error>
         </mat-form-field>
+        <div style="margin-top: 16px;">
+            <button mat-raised-button color="primary" (click)="createProduct()" [disabled]="!form.form.valid">
+                Salvar
+            </button>
+            <button mat-raised-button style="margin-left:8px;" (click)="cancel()">
+                Cancelar
+            </button>
+        </div>
     </form>
-    <button mat-raised-button (click)="createProduct()" color="primary" [disabled]="!form.form.valid">
-        Salvar
-    </button>
-    
-    <button mat-raised-button (click)="cancel()">
-        Cancelar
-    </button>
-</mat-card>
+</div>
 
