@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { MatSidenavContainer, MatSidenav } from "@angular/material/sidenav";
-import { MatNavList, MatListItem } from "../../../../../node_modules/@angular/material/list/index";
+import { MatListModule } from "@angular/material/list";
 
 @Component({
   selector: 'app-nav',
-  imports: [MatSidenavContainer, MatSidenav, MatNavList, MatListItem],
+  imports: [MatSidenavContainer, MatSidenav, MatListModule],
   templateUrl: './nav.html',
-  styleUrl: './nav.css'
+  styleUrls: ['./nav.css']
 })
 export class Nav 
 {
