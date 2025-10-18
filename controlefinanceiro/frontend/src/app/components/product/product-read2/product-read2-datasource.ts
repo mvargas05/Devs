@@ -4,6 +4,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import { ProductService } from '../product.service';
 
 const EXAMPLE_DATA: Product[] = [
   {id: 1, name: 'Hydrogen', price: 9.99},
@@ -34,12 +35,18 @@ const EXAMPLE_DATA: Product[] = [
  * (including sorting, pagination, and filtering).
  */
 export class ProductRead2DataSource extends DataSource<Product> {
-  data: Product[] = EXAMPLE_DATA;
+  data: Product[] = [];
   paginator: MatPaginator;
   sort: MatSort;
 
-  constructor() {
+  constructor(private productService: ProductService) {
     super();
+    // carrega dados iniciais do backend
+    this.productService.read().subscribe(products => {
+      this.data = products;
+    }, err => {
+      console.error('ProductRead2DataSource load error', err);
+    });
   }
 
   /**

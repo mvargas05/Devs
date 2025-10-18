@@ -23,10 +23,16 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Produto criado!')
-      this.router.navigate(['/produtos'])
-    })
+    this.productService.create(this.product).subscribe({
+      next: () => {
+        this.productService.showMessage('Produto criado!');
+        this.router.navigate(['/produtos']);
+      },
+      error: (err) => {
+        this.productService.showMessage('Erro ao criar produto', true);
+        console.error('createProduct error', err);
+      }
+    });
 
   }
 
