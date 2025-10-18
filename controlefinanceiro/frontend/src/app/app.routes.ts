@@ -1,9 +1,10 @@
-import { Routes } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
+
 
 import { Home } from "./views/home/home";
 import { ProductCrud } from "./views/product-crud/product-crud";
 
-export const routes: Routes = [{
+export const routes: RouterOutlet = [{
     path: "",
     component: Home
 }, {
