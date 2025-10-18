@@ -5,7 +5,9 @@ Repositório "controlefinanceiro" com duas partes principais:
 - `backend/` — API falsa baseada em `json-server` que serve `db.json` na porta 3001.
 
 ## Objetivo do agente
-Ajude a implementar features e correções no frontend Angular, mantendo compatibilidade com a API mock em `http://localhost:3001/` (endpoint primário: `/products`). Priorize pequenas alterações locais, testes manuais com `ng serve` e integração com `json-server` durante desenvolvimento.
+Ajude a implementar features e correções no frontend Angular, mantendo compatibilidade com a API mock em `http://localhost:3001/` (endpoint REST: `/products`).
+
+Observação importante: as rotas de navegação do frontend usam caminhos em português (por exemplo `/produtos`, `/produtos/create`, `/produtos/update/:id`, `/produtos/delete/:id`). Não confundir essas rotas de UI com os recursos REST do backend (`/products`). Priorize mudanças que respeitem essa distinção.
 
 ## Comandos úteis
 - Iniciar frontend: `npm --prefix frontend run start` (usa `ng serve` — app em http://localhost:4200)

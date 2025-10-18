@@ -14,19 +14,19 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "products",
+    path: "produtos",
     component: ProductCrudComponent
   },
   {
-    path: "products/create",
+    path: "produtos/create",
     component: ProductCreateComponent
   },
   {
-    path: "products/update/:id",
+    path: "produtos/update/:id",
     component: ProductUpdateComponent
   },
   {
-    path: "products/delete/:id",
+    path: "produtos/delete/:id",
     component: ProductDeleteComponent
   },
 ];
