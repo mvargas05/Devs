@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { MatToolbar } from "@angular/material/toolbar";
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-footer',
   imports: [MatToolbar],
-  templateUrl: './header.html',
-  styleUrl: './header.css'
+  templateUrl: './footer.html',
+  styleUrl: './footer.css'
 })
-export class Header {
+export class Footer {
 
 }

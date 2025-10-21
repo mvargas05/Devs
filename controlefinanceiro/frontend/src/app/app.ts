@@ -1,12 +1,13 @@
-import { Component, signal, NgModule } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './components/template/header/header';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { Footer } from "./components/template/footer/footer";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header, MatToolbarModule, NgModule],
+  imports: [Header, MatToolbarModule, Footer],
   templateUrl: './app.component.html',
 })
 export class App {
