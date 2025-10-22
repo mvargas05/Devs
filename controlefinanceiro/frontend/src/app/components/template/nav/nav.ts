@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { MatSidenav, MatSidenavContainer } from "@angular/material/sidenav";
+import { MatSidenav, MatSidenavContainer, MatSidenavContent } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
+import { Home } from "../../../views/home/home";
 
 @Component({
   selector: 'app-nav',
-  imports: [MatSidenav, MatSidenavContainer, MatListModule],
+  imports: [MatSidenav, MatSidenavContainer, MatListModule, MatSidenavContent, Home],
   templateUrl: './nav.html',
   styleUrl: './nav.css'
 })
