@@ -7,6 +7,6 @@ import { MatCard, MatCardTitle, MatCardSubtitle } from "@angular/material/card";
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home {
+export class HomeComponent {
 
 }
