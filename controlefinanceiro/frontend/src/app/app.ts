@@ -8,12 +8,22 @@ import { MatListModule } from "@angular/material/list";
 import { Nav } from "./components/template/nav/nav";
 import { MatCardModule } from "@angular/material/card";
 
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, MatToolbarModule, Footer, MatSidenavModule, MatListModule, Nav, MatCardModule,RouterOutlet,RouterLink],
+  imports: [
+    Header, 
+    MatToolbarModule, 
+    Footer, 
+    MatSidenavModule, 
+    MatListModule, 
+    Nav, 
+    MatCardModule, 
+    RouterOutlet, 
+    RouterLink
+  ],
   templateUrl: './app.component.html',
-  
 })
 export class App {
   protected readonly title = signal('frontend');
