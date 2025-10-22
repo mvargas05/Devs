@@ -11,7 +11,7 @@ import { MatCardModule } from "@angular/material/card";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Header, MatToolbarModule, Footer, MatSidenavModule, MatListModule, Nav, MatCardModule],
+  imports: [Header, MatToolbarModule, Footer, MatSidenavModule, MatListModule, Nav, MatCardModule, RouterOutlet],
   templateUrl: './app.component.html',
 })
 export class App {
