@@ -1,5 +1,4 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet , RouterLink} from '@angular/router';
 import { Header } from './components/template/header/header';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Footer } from "./components/template/footer/footer";
@@ -20,8 +19,6 @@ import { MatButtonModule } from "@angular/material/button";
     MatListModule, 
     Nav, 
     MatCardModule, 
-    RouterOutlet, 
-    RouterLink,
     MatButtonModule
   ],
   templateUrl: './app.component.html',
