@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component, signal } from '@angular/core';
 import { Header } from './components/template/header/header';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -7,6 +8,8 @@ import { MatListModule } from "@angular/material/list";
 import { Nav } from "./components/template/nav/nav";
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +22,9 @@ import { MatButtonModule } from "@angular/material/button";
     MatListModule, 
     Nav, 
     MatCardModule, 
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule,
+    provideHttpClient
   ],
   templateUrl: './app.component.html',
 })
