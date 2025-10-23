@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProductRead } from "../../componentes/products/product-read/product-read";
 
 @Component({
   selector: 'app-product-crud',
-  imports: [],
+  imports: [ProductRead],
   templateUrl: './product-crud.html',
   styleUrl: './product-crud.css'
 })
