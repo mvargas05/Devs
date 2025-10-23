@@ -35,6 +35,18 @@
       "name": "Produto Teste",
       "price": 125.98,
       "category": "Electronics"
+    },
+    {
+      "id": "2bcf",
+      "name": "Veio do Formulário",
+      "price": 99.99,
+      "category": "Form"
+    },
+    {
+      "id": "b1f6",
+      "name": "",
+      "price": null,
+      "category": ""
     }
   ]
 }
