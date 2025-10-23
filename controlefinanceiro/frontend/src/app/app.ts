@@ -7,7 +7,7 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatListModule } from "@angular/material/list";
 import { Nav } from "./components/template/nav/nav";
 import { MatCardModule } from "@angular/material/card";
-
+import { MatButtonModule } from "@angular/material/button";
 
 @Component({
   selector: 'app-root',
@@ -21,7 +21,8 @@ import { MatCardModule } from "@angular/material/card";
     Nav, 
     MatCardModule, 
     RouterOutlet, 
-    RouterLink
+    RouterLink,
+    MatButtonModule
   ],
   templateUrl: './app.component.html',
 })
