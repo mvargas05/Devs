@@ -4,26 +4,24 @@ form{
 }
 
 .salvar {
-    margin-top: 20px;
-    margin-right: 15px;
+    margin: 20px 15px 10px 10px;
     background-color: #007bff; /* Cor de fundo azul */
     color: #fff; /* Cor do texto branco */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Adiciona cantos arredondados */
-    padding: 10px 20px; /* Preenchimento interno */
+    padding: 10px 10px; /* Preenchimento interno */
     font-size: 16px; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
     transition: background-color 0.3s ease;
 }   
 
 .cancelar {
-    margin-top: 20px;
-    margin-right: 15px;
+    margin: 20px 15px 10px 10px;
     background-color: #ff4800; /* Cor de fundo azul */
     color: #fff; /* Cor do texto branco */
     border: none; /* Remove a borda padrão */
     border-radius: 5px; /* Adiciona cantos arredondados */
-    padding: 10px 20px; /* Preenchimento interno */
+    padding: 10px 10px; /* Preenchimento interno */
     font-size: 16px; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para uma mãozinha ao passar o mouse */
     transition: background-color 0.3s ease;
