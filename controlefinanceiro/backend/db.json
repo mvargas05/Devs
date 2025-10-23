@@ -1,23 +1,40 @@
 {
-"products": [
+  "products": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Laptop",
       "price": 1200.89,
       "category": "Electronics"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Smartphone",
-      "price": 800.50,
+      "price": 800.5,
       "category": "Electronics"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Desk Chair",
       "price": 150.75,
       "category": "Furniture"
+    },
+    {
+      "id": "5c4a",
+      "name": "Produto Teste",
+      "price": 125.98,
+      "category": "Electronics"
+    },
+    {
+      "id": "a959",
+      "name": "Produto Teste",
+      "price": 125.98,
+      "category": "Electronics"
+    },
+    {
+      "id": "b24f",
+      "name": "Produto Teste",
+      "price": 125.98,
+      "category": "Electronics"
     }
   ]
-
 }
