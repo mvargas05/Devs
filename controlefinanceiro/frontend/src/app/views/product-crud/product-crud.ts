@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductRead } from "../../componentes/products/product-read/product-read";
-import { CdkOverlayOrigin } from "@angular/cdk/overlay";
+import { ProductRead } from "../../components/products/product-read/product-read";
+
+
 
 @Component({
   selector: 'app-product-crud',
-  imports: [ProductRead, CdkOverlayOrigin],
+  imports: [ProductRead],
   templateUrl: './product-crud.html',
   styleUrl: './product-crud.css'
 })
