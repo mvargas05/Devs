@@ -2,23 +2,22 @@
 import { ServerRoute, RenderMode } from '@angular/ssr';
 import { inject } from '@angular/core';
 import { ProductService } from './components/products/product.service';
+import { firstValueFrom } from 'rxjs'; // Importe firstValueFrom
 
 export const serverRoutes: ServerRoute[] = [
   {
     path: 'products/update/:id',
     renderMode: RenderMode.Prerender,
     async getPrerenderParams() {
-      // Injeta o serviço para buscar os IDs
+      // Injeta o serviço
       const productService = inject(ProductService);
+
+      // Converte o Observable para uma Promise usando firstValueFrom
+      const products = await firstValueFrom(productService.read());
       
-      // Assume que `readAll()` ou uma função similar retorna uma lista de produtos
-      // ou um método que retorna apenas os IDs.
-      const product = await productService.read();
-      
-      // Mapeia os produtos para retornar um array de objetos com o parâmetro 'id'
-      return product.map(product => ({ id: product.id.toString() }));
+      // Agora você pode mapear o array de produtos
+      return products.map(product => ({ id: product.id.toString() }));
     },
   },
-  // Rotas curinga para outras rotas não pré-renderizadas
   { path: '**', renderMode: RenderMode.Prerender },
 ];
