@@ -18,7 +18,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductUpdate implements OnInit {
   
- product: Product = { id: 0, name: '', price: 0, category: '' };
+ product!: Product ;
   
 
   constructor(
@@ -26,9 +26,8 @@ export class ProductUpdate implements OnInit {
     private router: Router, 
     private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
-   const id = this.route.snapshot.paramMap.get('id');
-    
+ ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.productService.readById(Number(id)).subscribe(product => {
         this.product = product;
@@ -38,6 +37,7 @@ export class ProductUpdate implements OnInit {
       this.router.navigate(['/products']);
     }
   }
+
 
 
   updateProduct(): void {

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Product } from './product.model';
+import { Product, NewProduct } from './product.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -33,8 +33,8 @@ export class ProductService {
     });
   }
 
-  createProduct(product: Product) {
-    return this.http.post<Product>(this.baseUrl, product);
+  createProduct(product: NewProduct) {
+    return this.http.post<NewProduct>(this.baseUrl, product);
   }
 
   read(): Observable<Product[]> {

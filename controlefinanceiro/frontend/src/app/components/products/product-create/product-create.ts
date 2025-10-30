@@ -1,7 +1,7 @@
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from '../product.model';
+import { NewProduct } from '../product.model';
 import { MatCard } from "@angular/material/card";
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule} from '@angular/material/form-field';
@@ -16,7 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class ProductCreate implements OnInit {
   
- product: Product = {
+ newproduct: NewProduct = {
     name: '',
     price: null,
     category: ''
@@ -31,7 +31,7 @@ export class ProductCreate implements OnInit {
   }
 
   createProduct(): void {
-    this.ProductService.createProduct(this.product).subscribe(() => {
+    this.ProductService.createProduct(this.newproduct).subscribe(() => {
       this.ProductService.showSuccess('Product created successfully!');
       this.router.navigate(['/products']);
     });
