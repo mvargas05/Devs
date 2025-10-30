@@ -6,11 +6,12 @@ import { MatTableModule, MatTable } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatSortModule, MatSort } from '@angular/material/sort';
 import { ProductReadDataSource } from './product-read-datasouce';
+import { RouterLink } from "@angular/router";
 
 
 @Component({
   selector: 'app-product-read',
-  imports: [CurrencyPipe, MatTableModule, MatPaginatorModule, MatSortModule],
+  imports: [CurrencyPipe, MatTableModule, MatPaginatorModule, MatSortModule, RouterLink],
   templateUrl: './product-read.html',
   styleUrl: './product-read.css'
 })
@@ -24,7 +25,7 @@ export class ProductRead implements AfterViewInit, OnInit {
   @ViewChild(MatTable) table!: MatTable<Product>;
   dataSource = new ProductReadDataSource();
 
-  displayedColumns = ['id', 'name', 'price', 'category'];
+  displayedColumns = ['id', 'name', 'price', 'category', 'action'];
 
   constructor(private productService: ProductService) {}
 
