@@ -19,28 +19,22 @@
       "category": "Furniture"
     },
     {
-      "id": "5c4a",
-      "name": "Produto Teste",
-      "price": 125.98,
-      "category": "Electronics"
+      "id": 0,
+      "name": "Celular",
+      "price": 9999.99,
+      "category": "Telefonia"
     },
     {
-      "id": "a959",
-      "name": "Produto Teste",
-      "price": 125.98,
-      "category": "Electronics"
+      "id": 0,
+      "name": "Celular 2",
+      "price": 8888.88,
+      "category": "Telefonia"
     },
     {
-      "id": "b24f",
-      "name": "Produto Teste",
-      "price": 125.98,
-      "category": "Electronics"
-    },
-    {
-      "id": "2bcf",
-      "name": "Veio do Formulário",
-      "price": 99.99,
-      "category": "Form"
+      "id": "be12",
+      "name": "Celular 3",
+      "price": 7777.77,
+      "category": "Telefonia"
     }
   ]
 }

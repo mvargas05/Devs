@@ -16,11 +16,11 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class ProductCreate implements OnInit {
   
-  product: Product = {
+ product: Product = {
     name: '',
     price: null,
     category: ''
-  };
+  }
 
   constructor( private ProductService: ProductService,
     private router: Router
@@ -34,12 +34,14 @@ export class ProductCreate implements OnInit {
     this.ProductService.createProduct(this.product).subscribe(() => {
       this.ProductService.showSuccess('Product created successfully!');
       this.router.navigate(['/products']);
-    }
-    );
+    });
   }
 
   cancel(): void {
     this.router.navigate(['/products']);
   }
 
+  
+
 }
+
