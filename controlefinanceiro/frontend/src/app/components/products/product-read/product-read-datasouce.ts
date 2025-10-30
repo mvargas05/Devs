@@ -9,26 +9,9 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: Product[] = [
-  {id: 1, name: 'Hydrogen', price: 1.00794, category: 'Nonmetal'},
-  {id: 2, name: 'Helium', price: 4.002602, category: 'Noble gas'},
-  {id: 3, name: 'Lithium', price: 6.941, category: 'Alkali metal'},
-  {id: 4, name: 'Beryllium', price: 9.012182, category: 'Alkaline earth metal'},
-  {id: 5, name: 'Boron', price: 10.811, category: 'Metalloid'},
-  {id: 6, name: 'Carbon', price: 12.0107, category: 'Nonmetal'},
-  {id: 7, name: 'Nitrogen', price: 14.0067, category: 'Nonmetal'},
-  {id: 8, name: 'Oxygen', price: 15.999, category: 'Nonmetal'},
-  {id: 9, name: 'Fluorine', price: 18.9984032, category: 'Nonmetal'},
-  {id: 10, name: 'Neon', price: 20.1797, category: 'Noble gas'},
-  {id: 11, name: 'Sodium', price: 22.98976928, category: 'Alkali metal'},
-  {id: 12, name: 'Magnesium', price: 24.305, category: 'Alkaline earth metal'},
-  {id: 13, name: 'Aluminum', price: 26.9815385, category: 'Post-transition metal'},
-  {id: 14, name: 'Silicon', price: 28.0855, category: 'Metalloid'},
-  {id: 15, name: 'Phosphorus', price: 30.973761998, category: 'Nonmetal'},
-  {id: 16, name: 'Sulfur', price: 32.06, category: 'Nonmetal'},
-  {id: 17, name: 'Chlorine', price: 35.45, category: 'Nonmetal'},
-  {id: 18, name: 'Argon', price: 39.948, category: 'Noble gas'},
-  {id: 19, name: 'Potassium', price: 39.0983, category: 'Alkali metal'},
-  {id: 20, name: 'Calcium', price: 40.078, category: 'Alkaline earth metal'},
+  {id: '1a', name: 'Hydrogen', price: 1.00794, category: 'Nonmetal'},
+  {id: '2b', name: 'Helium', price: 4.002602, category: 'Noble gas'},
+ ,
 ];
 
 /**

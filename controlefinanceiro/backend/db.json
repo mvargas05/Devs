@@ -47,6 +47,12 @@
       "name": "Teste3",
       "price": 199.01,
       "category": "Teste3"
+    },
+    {
+      "name": "Teste Número",
+      "price": 10,
+      "category": "Teste",
+      "id": "KQBHr4q"
     }
   ]
 }

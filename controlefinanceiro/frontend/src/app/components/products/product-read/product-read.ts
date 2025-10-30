@@ -17,9 +17,7 @@ import { RouterLink } from "@angular/router";
 export class ProductRead implements AfterViewInit, OnInit {
 
   products: Product[] = [];
-  
-  // Use MatTableDataSource diretamente
-  dataSource = new MatTableDataSource<Product>([]);
+  dataSource = new MatTableDataSource<Product>(this.products);
   
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
