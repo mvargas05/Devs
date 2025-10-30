@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
-import { MatPaginator } from '@angular/material/paginator';
+//import { MatPaginator } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 
 import localePt from '@angular/common/locales/pt';
@@ -37,7 +37,6 @@ registerLocaleData(localePt);
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatPaginator,
     MatSortModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
