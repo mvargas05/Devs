@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Product } from './product.model';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 //import { MatPaginator } from '@angular/material/paginator';
 
@@ -23,12 +24,32 @@ export class ProductService {
     });
   }
 
+  showError(message: string) {
+    this.snackBar.open(message, 'X', {
+      duration: 3000,
+      horizontalPosition: 'right',
+      verticalPosition: 'top',
+      panelClass: ['error-snackbar']
+    });
+  }
+
   createProduct(product: Product) {
     return this.http.post<Product>(this.baseUrl, product);
   }
 
   read(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.baseUrl);
+    return this.http.get<Product[]>(this.baseUrl).pipe(
+      map(products => products || [])
+    );
+  }
+
+  readById(id: number): Observable<Product> {
+    const url = `${this.baseUrl}/${id}`;
+    return this.http.get<Product>(url);
+  }
+  updateProduct(product: Product): Observable<Product> {
+    const url = `${this.baseUrl}/${product.id}`;
+    return this.http.put<Product>(url, product);
   }
 
 }
