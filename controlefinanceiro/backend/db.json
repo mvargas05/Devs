@@ -19,31 +19,31 @@
       "category": "Furniture"
     },
     {
-      "id": "0",
+      "id": "4",
       "name": "Celular",
       "price": 9999.99,
       "category": "Telefonia"
     },
     {
-      "id": "0",
+      "id": "5",
       "name": "Celular 2",
       "price": 8888.88,
       "category": "Telefonia"
     },
     {
-      "id": "be12",
+      "id": "6",
       "name": "Celular 3",
       "price": 7777.77,
       "category": "Telefonia"
     },
     {
-      "id": "4b8e",
+      "id": "7",
       "name": "Novo Teste",
       "price": 100.99,
       "category": "Novo"
     },
     {
-      "id": "ed92",
+      "id": "8",
       "name": "Teste3",
       "price": 199.01,
       "category": "Teste3"
