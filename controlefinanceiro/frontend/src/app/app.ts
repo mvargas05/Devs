@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, LOCALE_ID } from '@angular/core';
 import { Header } from './components/template/header/header';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Footer } from "./components/template/footer/footer";
@@ -11,8 +11,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
 
+registerLocaleData(localePt);
 
 @Component({
   selector: 'app-root',
@@ -29,8 +35,12 @@ import { MatInputModule } from '@angular/material/input';
     MatSnackBarModule,
     FormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatPaginator,
+    MatSortModule
   ],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   templateUrl: './app.component.html',
 })
 export class App {

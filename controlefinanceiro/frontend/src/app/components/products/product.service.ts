@@ -4,6 +4,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Product } from './product.model';
 import { Observable } from 'rxjs';
 
+//import { MatPaginator } from '@angular/material/paginator';
+
 @Injectable({
   providedIn: 'root'
 })
