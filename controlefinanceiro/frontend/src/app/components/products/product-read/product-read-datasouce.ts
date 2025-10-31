@@ -11,7 +11,6 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 const EXAMPLE_DATA: Product[] = [
   {id: '1a', name: 'Hydrogen', price: 1.00794, category: 'Nonmetal'},
   {id: '2b', name: 'Helium', price: 4.002602, category: 'Noble gas'},
- ,
 ];
 
 /**
