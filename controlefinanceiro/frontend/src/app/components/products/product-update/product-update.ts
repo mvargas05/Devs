@@ -29,7 +29,7 @@ export class ProductUpdate implements OnInit {
  ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
-      this.productService.readById(Number(id)).subscribe(product => {
+      this.productService.readById(String(id)).subscribe(product => {
         this.product = product;
       });
     } else {
