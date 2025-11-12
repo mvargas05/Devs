@@ -9,8 +9,9 @@ import { ProductUpdate } from './components/products/product-update/product-upda
 
 
 export const routes: Routes = [
+    { path: 'login', loadComponent: () => import('./login/login').then(m => m.LoginComponent) },
     { path: '', component: HomeComponent },
     { path: 'products', component: ProductCrudComponent },
     { path: 'products/create', component: ProductCreate },
-     { path: 'products/update/:id', component: ProductUpdate },
+    { path: 'products/update/:id', component: ProductUpdate },
 ];

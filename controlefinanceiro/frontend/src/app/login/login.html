@@ -1,0 +1,37 @@
+<div class="login-box">
+  <h2>Entrar na sua conta</h2>
+
+  <button class="login-btn google" (click)="loginWith('Google')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" />
+    Entrar com Google
+  </button>
+
+  <button class="login-btn facebook" (click)="loginWith('Facebook')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" />
+    Entrar com Facebook
+  </button>
+
+  <button class="login-btn apple" (click)="loginWith('Apple')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" />
+    Entrar com Apple
+  </button>
+
+  <div class="divider">ou use seu e-mail</div>
+
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input type="email" formControlName="email" placeholder="E-mail" />
+    <div *ngIf="submitted && f.email.errors" class="error">
+      <small *ngIf="f.email.errors.required">E-mail é obrigatório.</small>
+      <small *ngIf="f.email.errors.email">Formato de e-mail inválido.</small>
+    </div>
+
+    <input type="password" formControlName="senha" placeholder="Senha" />
+    <div *ngIf="submitted && f.senha.errors" class="error">
+      <small *ngIf="f.senha.errors.required">Senha é obrigatória.</small>
+      <small *ngIf="f.senha.errors.minlength">Mínimo de 6 caracteres.</small>
+    </div>
+
+    <button type="submit" class="submit-btn">Entrar</button>
+    <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  </form>
+</div>
