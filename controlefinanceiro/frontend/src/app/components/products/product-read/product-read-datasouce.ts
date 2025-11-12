@@ -9,8 +9,8 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: Product[] = [
-  {id: '1a', name: 'Hydrogen', price: 1.00794, category: 'Nonmetal'},
-  {id: '2b', name: 'Helium', price: 4.002602, category: 'Noble gas'},
+  {id: 1, name: 'Hydrogen', price: 1.00794, category: 'Nonmetal'},
+  {id: 2, name: 'Helium', price: 4.002602, category: 'Noble gas'},
 ];
 
 /**

@@ -26,27 +26,25 @@ export class ProductUpdate implements OnInit {
     private router: Router, 
     private route: ActivatedRoute) { }
 
- ngOnInit(): void {
+ngOnInit(): void {
+  const idParam = this.route.snapshot.paramMap.get('id');
 
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.productService.readById(String(id)).subscribe(product => {
-
-    const idParam = this.route.snapshot.paramMap.get('id');
-    
-    // 1. Verifique se o ID existe E se é um número válido.
-    if (idParam && !isNaN(Number(idParam))) {
-      const id = Number(idParam);
-      
-      this.productService.readById(id).subscribe(product => {
+  if (idParam) {
+    const id = Number(idParam);
+    if (!isNaN(id)) {
+      this.productService.readById('id').subscribe(product => {
         this.product = product;
       });
     } else {
-      // 2. Se o ID for inválido ou NaN, exiba um erro e redirecione.
       this.productService.showError('ID do produto inválido.');
       this.router.navigate(['/products']);
     }
+  } else {
+    this.productService.showError('ID não fornecido na rota.');
+    this.router.navigate(['/products']);
   }
+}
+
 
   updateProduct(): void {
     // Adicione uma verificação de segurança antes de chamar o update
