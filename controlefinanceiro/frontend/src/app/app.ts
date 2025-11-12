@@ -16,7 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 
 import localePt from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common';
+import { registerLocaleData,CommonModule  } from '@angular/common';
 
 registerLocaleData(localePt);
 
@@ -37,7 +37,8 @@ registerLocaleData(localePt);
     MatFormFieldModule,
     MatInputModule,
     MatTableModule,
-    MatSortModule
+    MatSortModule,
+    CommonModule 
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt-BR' }],
   templateUrl: './app.component.html',
